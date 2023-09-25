@@ -1,0 +1,19 @@
+# Usage: pip install -r requirements.txt
+
+# -r requirements/build.txt
+# -r requirements/optional.txt
+# -r requirements/runtime.txt
+# -r requirements/tests.txt
+
+# Base --------------------------------------
+
+# if we will use the backbone network implemented in MMPretrain,
+# and fine-tune the model implemented in MMDetection, we should install this
+mmpretrain==1.0.2
+
+# visualization
+tensorboard==2.12.0
+xlwings==0.30.5
+
+# Extras --------------------------------------
+ipykernel==6.15.1
