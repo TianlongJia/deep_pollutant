@@ -36,9 +36,12 @@ Example:
         --show
 """
 import sys
+import os
+
+# we will use the "mmdet.apis.det_inferencer.py" in the current path, not in environment
 
 # sys.path.insert(int, 'the_path') # "int" indicates the priority of this path search (e.g., 0123...)
-sys.path.insert(0, '/scratch/tjian/PythonProject/DP_MMDetection/')
+sys.path.insert(0, os.getcwd())
 
 # print("sys.path: ", sys.path)
 

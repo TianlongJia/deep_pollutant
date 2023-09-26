@@ -461,14 +461,21 @@ class DetInferencer(BaseInferencer):
                 results_dict['visualization'].extend(results['visualization'])
             tmp += 1
 
-        print("all_img_name_list: ", all_img_name_list)
-        print("all_cls_name_list: ", all_cls_name_list)
-        print("all_bbox_area_list: ", all_bbox_area_list)
-        print("all_scores_list: ", all_scores_list)
-        print("all_mask_area_list: ", all_mask_area_list)
+        # print("all_img_name_list: ", all_img_name_list)
+        # print("all_cls_name_list: ", all_cls_name_list)
+        # print("all_bbox_area_list: ", all_bbox_area_list)
+        # print("all_scores_list: ", all_scores_list)
+        # print("all_mask_area_list: ", all_mask_area_list)
 
         bs.save_bbox_info_in_excel(all_img_name_list, 
-         all_xmin_list, all_ymin_list, all_xmax_list, all_ymax_list, all_scores_list, all_cls_name_list, all_bbox_area_list, all_mask_area_list)
+                                   all_xmin_list, 
+                                   all_ymin_list, 
+                                   all_xmax_list, 
+                                   all_ymax_list, 
+                                   all_scores_list, 
+                                   all_cls_name_list, 
+                                   all_bbox_area_list, 
+                                   all_mask_area_list)
 
         return results_dict
 
@@ -601,9 +608,9 @@ class DetInferencer(BaseInferencer):
 
         result_dict = {}
         results = preds
-        print("#############")
-        print("Image name: ", mask_name)
-        print("#############")
+        # print("#############")
+        # print("Image name: ", mask_name)
+        # print("#############")
 
 
         if not return_datasample:
@@ -855,11 +862,11 @@ class DetInferencer(BaseInferencer):
         if is_save_pred:
             mmengine.dump(result, out_json_path)
 
-        print("img_name_list:", img_name_list)
-        print("cls_name_list: ", cls_name_list)
-        print("bbox_area_list: ", bbox_area_list)
-        print("bbox_scores_list: ", scores_list)
-        print("mask_area_list: ", mask_area_list)
+        # print("img_name_list:", img_name_list)
+        # print("cls_name_list: ", cls_name_list)
+        # print("bbox_area_list: ", bbox_area_list)
+        # print("bbox_scores_list: ", scores_list)
+        # print("mask_area_list: ", mask_area_list)
         
         bbox_mask_inf_results=[img_name_list, 
                                cls_name_list, 
