@@ -175,14 +175,14 @@ def plot_confusion_matrix(confusion_matrix,
     num_classes = len(labels)
     fig, ax = plt.subplots(
         # figsize=(0.5 * num_classes, 0.5 * num_classes * 0.8), dpi=180)
-        figsize=(10 * num_classes, 10 * num_classes * 0.8), dpi=180)
+        figsize=(5 * num_classes, 5 * num_classes * 0.8), dpi=180)
     cmap = plt.get_cmap(color_theme)
     im = ax.imshow(confusion_matrix, cmap=cmap)
     plt.colorbar(mappable=im, ax=ax)
 
-    title_font = {'weight': 'bold', 'size': 12}
+    title_font = {'weight': 'bold', 'size': 24}
     ax.set_title(title, fontdict=title_font)
-    label_font = {'size': 10}
+    label_font = {'size': 18}
     plt.ylabel('Ground Truth Label', fontdict=label_font)
     plt.xlabel('Prediction Label', fontdict=label_font)
 
