@@ -467,6 +467,8 @@ class DetInferencer(BaseInferencer):
         # print("all_scores_list: ", all_scores_list)
         # print("all_mask_area_list: ", all_mask_area_list)
 
+
+        ##########################  Save the output in a excel file (begin) #########################
         bs.save_bbox_info_in_excel(all_img_name_list, 
                                    all_xmin_list, 
                                    all_ymin_list, 
@@ -476,6 +478,7 @@ class DetInferencer(BaseInferencer):
                                    all_cls_name_list, 
                                    all_bbox_area_list, 
                                    all_mask_area_list)
+        ##########################  Save the output in a excel file (end) #########################
 
         return results_dict
 
@@ -683,6 +686,7 @@ class DetInferencer(BaseInferencer):
         index_dict =  {}
         # print("pred_score_thr: ", pred_score_thr)
         # print("Num of CLASSES: ", len(self.CLASSES))
+        
         # 筛选出高置信度的mask
         kept_inds = []
         for i in range(len(scores)):
@@ -690,14 +694,16 @@ class DetInferencer(BaseInferencer):
                 kept_inds.append(i)
                 # score_list.append(scores[i])
         # print("kept_inds_mask: ", kept_inds)
+        
         # 设定每个mask合并后对应的像素值
-        for i in range(len(self.CLASSES)):
-            index_dict[self.CLASSES[i]] = i * 50  # 不同类别的像素值的间隔为10
-            index_dict[self.CLASSES[0]]= 20
-        height = masks[0].shape[0]
-        width = masks[0].shape[1]
-        imgmask = np.zeros((height, width), np.uint16)  # 初始化待合并的mask
-        # review each mask, and output final mask
+        # for i in range(len(self.CLASSES)):
+        #     index_dict[self.CLASSES[i]] = i * 50  # 不同类别的像素值的间隔为10
+        #     index_dict[self.CLASSES[0]]= 20
+        # height = masks[0].shape[0]
+        # width = masks[0].shape[1]
+        # imgmask = np.zeros((height, width), np.uint16)  # 初始化待合并的mask
+        
+        # review each mask, and output final mask area
         for idx in kept_inds:
             cls_name = self.CLASSES[labels[idx]]  # 获取当前mask对应的label
             # print(cls_name, index_dict[cls_name])
@@ -709,8 +715,8 @@ class DetInferencer(BaseInferencer):
 
             mask_area_list.append(mask_area)
             # cls_name_list.append(cls_name)            
-            imgmask = np.where(masks[idx].cpu().numpy()==True, index_dict[cls_name], imgmask)
-            index_dict[cls_name] += 1    # 下一个同label的id自增1
+            # imgmask = np.where(masks[idx].cpu().numpy()==True, index_dict[cls_name], imgmask)
+            # index_dict[cls_name] += 1    # 下一个同label的id自增1
 
 
         # print("imgmask.shape: ", imgmask.shape)
