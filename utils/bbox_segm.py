@@ -8,7 +8,7 @@ def save_bbox_info_in_excel(filename_list,
          xmin_list, ymin_list, xmax_list, ymax_list, conf_list, class_bbox_list, area_bbox_list, area_mask_list):
   app = xw.App(visible = True,add_book = False)  
 
-  excel_path = r"U:\AIMMW\Tianlong\Pollutant\dataset\v2\test.xlsx"
+  excel_path = r"U:\AIMMW\Tianlong\Pollutant\Model_application\pred_img_before_I_am_China\mixture-feeding.xlsx"
   worksheet = "Sheet1"
   
   workbook = app.books.open(excel_path)
