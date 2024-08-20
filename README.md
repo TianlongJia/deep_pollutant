@@ -7,6 +7,9 @@ This repository contains the code used for the following publication:
 
 The aim of this code is to use deep learning models to detect the interaction between microparticles and biomass in biological wastewater treatment process.
 
+![summary_figure](figures/Graphical abstract.jpg)
+
+
 Acknowledgement:
 
 This project was inspired by an open source project ["MMDetection"](https://github.com/open-mmlab/mmdetection). 
