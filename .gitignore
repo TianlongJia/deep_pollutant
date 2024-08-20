@@ -125,9 +125,9 @@ checkpoints/
 *.sh~
 
 # images
-# *.jpg
-# *.JPG
-# *.png
+*.jpg
+*.JPG
+*.png
 
 # videos
 *.mp4

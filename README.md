@@ -48,7 +48,7 @@ mim install mmcv==2.0.1
 mim install mmdet==3.1.0
 ```
 
-(2) Install other packages
+(4) Install other packages
 
 ```bash
   pip install -r requirements.txt
@@ -61,7 +61,7 @@ This repository only includes the implementation of six model architectures: (1)
 ## Usage
 
 -  `main_InstanceSeg_train.ipynb` is the code for training deep models for object detection.
--  `main_InstanceSeg_evaluate.ipynb` is the code for (1) evaluating model performances on test sets (e.g., outputing mAP50), (2) predicting objects in images, (3) outputing confusion matrix, and (3) outputing bounding box (bbox) and mask information (e.g., the area of each bbox and mask).
+-  `main_InstanceSeg_evaluate.ipynb` is the code for (1) evaluating model performances on test sets (e.g., outputing mAP50), (2) predicting objects in images, (3) outputing confusion matrix, and (4) outputing bounding box (bbox) and mask information (e.g., the area of each bbox and mask).
 
 ## Citing this dataste or paper
 
