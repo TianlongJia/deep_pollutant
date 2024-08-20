@@ -5,11 +5,11 @@ This repository contains the code used for the following publication:
   To do: XXXXXXXX
 ```
 
-The aim of this code is to use deep learning models to the interaction between microparticles and biomass in biological wastewater treatment process.
+The aim of this code is to use deep learning models to detect the interaction between microparticles and biomass in biological wastewater treatment process.
 
 Acknowledgement:
 
-This project was inspired by an open source project "MMDetection"(https://github.com/open-mmlab/mmdetection). 
+This project was inspired by an open source project ["MMDetection"](https://github.com/open-mmlab/mmdetection). 
 Learn more about MMDetection at [documentation](https://mmdetection.readthedocs.io/en/latest/).
 
 ## Dataset
@@ -20,7 +20,9 @@ Learn more about MMDetection at [documentation](https://mmdetection.readthedocs.
   To do: XXXXXXXX
 ```
 
-## Requirements:
+## Installation:
+
+Requirements:
 - Windows 10 or Linux
 - Python 3.8.16
 - Pytorch 1.13.1
@@ -50,13 +52,13 @@ mim install mmdet==3.1.0
 ```
 
 ## Note
-This repository only includes the implementation of six model architectures: (1) Mask RCNN (ResNet50), (2) Mask RCNN (ResNet101), (3) Cascade Mask RCNN(ResNet50), (4) Cascade Mask RCNN(ResNet101), (5) Yolact (ResNet50), and (6) Yolact (ResNet101). The implementation of YOLOv8 can be found here(https://github.com/TianlongJia/deep_pollutant_YoloV8)
+This repository only includes the implementation of six model architectures: (1) Mask RCNN (ResNet50), (2) Mask RCNN (ResNet101), (3) Cascade Mask RCNN(ResNet50), (4) Cascade Mask RCNN(ResNet101), (5) Yolact (ResNet50), and (6) Yolact (ResNet101). The implementation of YOLOv8 can be found [here](https://github.com/TianlongJia/deep_pollutant_YoloV8)
 
 
 ## Usage
 
--  `main_InstanceSeg_train.ipynb` is the code for training the six deep models for object detection.
--  `main_InstanceSeg_evaluate.ipynb` is the code for (1) evaluating performances of six models on test sets (e.g., output mAP50), (2) predicting objects in images, (3) outputing confusion matrix, and (3) outputing bounding box (bbox) and mask information (e.g., the area of each bbox and mask).
+-  `main_InstanceSeg_train.ipynb` is the code for training deep models for object detection.
+-  `main_InstanceSeg_evaluate.ipynb` is the code for (1) evaluating model performances on test sets (e.g., outputing mAP50), (2) predicting objects in images, (3) outputing confusion matrix, and (3) outputing bounding box (bbox) and mask information (e.g., the area of each bbox and mask).
 
 ## Citing this dataste or paper
 
