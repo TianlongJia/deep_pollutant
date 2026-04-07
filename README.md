@@ -94,5 +94,5 @@ Science of The Total Environment, 175813. doi: 10.1016/j.scitotenv.2024.175813
 
 ## Contact
 
-➡️ Tianlong Jia ([T.Jia@tudelft.nl](mailto:T.Jia@tudelft.nl))
+➡️ Tianlong Jia ([tianlong.jia@kit.edu](mailto:tianlong.jia@kit.edu))
 
